@@ -25,7 +25,7 @@ function timeUntil(dateStr: string, timeStr: string): string {
 
 export function UpcomingHighImpact() {
   const { data } = useSWR<{ events: CalendarEvent[] }>("/api/calendar", fetcher, {
-    refreshInterval: 60 * 1000,
+    refreshInterval: 15 * 60 * 1000,
   });
 
   const upcoming = (data?.events ?? [])

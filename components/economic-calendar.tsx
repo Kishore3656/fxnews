@@ -122,7 +122,7 @@ export function EconomicCalendar() {
   const { data, isLoading, error, mutate } = useSWR<CalendarResponse>(
     "/api/calendar",
     fetcher,
-    { refreshInterval: 5 * 60 * 1000 }
+    { refreshInterval: 15 * 60 * 1000 }
   );
 
   const events = (data?.events ?? []).filter(ev => {

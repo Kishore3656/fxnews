@@ -2,8 +2,8 @@ import { NextResponse } from "next/server";
 import type { NewsItem } from "@/lib/types";
 import { extractCurrencies } from "@/lib/utils";
 
-// One function call serves ALL users for 3 minutes — cached at the edge
-export const revalidate = 180;
+// Cached at the edge for 15 minutes — news articles don't need per-minute updates
+export const revalidate = 900;
 
 interface RSSItem {
   title?: string;

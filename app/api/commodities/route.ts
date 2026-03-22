@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
-// One function call serves ALL users for 60 seconds — cached at the edge
-export const revalidate = 60;
+// Cached at the edge for 10 minutes — commodity prices don't need per-minute updates
+export const revalidate = 600;
 
 export const COMMODITY_LIST = [
   { symbol: "CL=F",  name: "Crude Oil WTI",   category: "Energy",    unit: "$/bbl" },

@@ -101,7 +101,7 @@ export function NewsFeed() {
   const { data, isLoading, error, mutate } = useSWR<NewsResponse>(
     apiUrl,
     fetcher,
-    { refreshInterval: 3 * 60 * 1000 }
+    { refreshInterval: 15 * 60 * 1000 }
   );
 
   return (

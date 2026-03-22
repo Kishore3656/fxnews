@@ -222,7 +222,7 @@ export function CommoditiesPanel() {
   const { data, isLoading, error, mutate } = useSWR<CommoditiesResponse>(
     "/api/commodities",
     fetcher,
-    { refreshInterval: 60 * 1000 }
+    { refreshInterval: 10 * 60 * 1000 }
   );
 
   const items = (data?.commodities ?? []).filter(
