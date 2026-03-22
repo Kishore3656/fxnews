@@ -2,6 +2,9 @@ import { NextResponse } from "next/server";
 import type { NewsItem } from "@/lib/types";
 import { extractCurrencies } from "@/lib/utils";
 
+// One function call serves ALL users for 3 minutes — cached at the edge
+export const revalidate = 180;
+
 interface RSSItem {
   title?: string;
   contentSnippet?: string;

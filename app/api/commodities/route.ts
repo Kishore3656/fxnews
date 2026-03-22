@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 
+// One function call serves ALL users for 60 seconds — cached at the edge
+export const revalidate = 60;
+
 export const COMMODITY_LIST = [
   { symbol: "CL=F",  name: "Crude Oil WTI",   category: "Energy",    unit: "$/bbl" },
   { symbol: "BZ=F",  name: "Brent Crude",      category: "Energy",    unit: "$/bbl" },

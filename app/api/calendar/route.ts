@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import type { CalendarEvent, ImpactLevel } from "@/lib/types";
 
+// One function call serves ALL users for 5 minutes — cached at the edge
+export const revalidate = 300;
+
 // ForexFactory public calendar JSON — widely used public endpoint
 const FF_CALENDAR_URL = "https://nfs.faireconomy.media/ff_calendar_thisweek.json";
 

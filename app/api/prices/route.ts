@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 
+// One function call serves ALL users for 30s — cached at the edge
+export const revalidate = 30;
+
 const PAIRS = [
   "EURUSD=X", "GBPUSD=X", "USDJPY=X", "AUDUSD=X",
   "USDCAD=X", "USDCHF=X", "NZDUSD=X", "EURGBP=X",
