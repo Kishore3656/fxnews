@@ -1,5 +1,4 @@
 import { Header } from "@/components/header";
-import { MarketOverview } from "@/components/market-overview";
 import { EconomicCalendar } from "@/components/economic-calendar";
 import { NewsFeed } from "@/components/news-feed";
 import { UpcomingHighImpact } from "@/components/upcoming-events";
@@ -13,11 +12,6 @@ export default function Home() {
         <Header />
 
         <main className="flex-1 max-w-[1800px] mx-auto w-full px-4 py-4 space-y-4">
-          {/* Forex Rates Bar */}
-          <section id="rates">
-            <MarketOverview />
-          </section>
-
           {/* Upcoming High Impact Alert */}
           <UpcomingHighImpact />
 

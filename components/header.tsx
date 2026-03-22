@@ -42,9 +42,6 @@ export function Header() {
           <a href="#news" className="px-2.5 py-1 rounded hover:bg-accent hover:text-foreground transition-colors">
             News
           </a>
-          <a href="#rates" className="px-2.5 py-1 rounded hover:bg-accent hover:text-foreground transition-colors">
-            Rates
-          </a>
           <a href="#commodities" className="px-2.5 py-1 rounded hover:bg-accent hover:text-foreground transition-colors">
             Commodities
           </a>
